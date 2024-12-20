@@ -24,7 +24,7 @@ public class ContactoControlador {
     @GetMapping("/")
     public String iniciar(ModelMap model) {
         List<Contacto> contactos = contactoServicio.listarContactos();
-        //contactos.forEach((contacto) -> logger.info(contacto.toString()));
+        contactos.forEach((contacto) -> logger.info(contacto.toString())); // Opcional
         model.put("contactos", contactos);
         return "index";
     }
@@ -36,7 +36,7 @@ public class ContactoControlador {
 
     @PostMapping("/agregar")
     public String agregar(@ModelAttribute("contactoForm") Contacto contactoNuevo) {
-        logger.info("Contacto a agregar: " + contactoNuevo);
+        logger.info("Contacto a agregar: " + contactoNuevo);  // Opcional
         contactoServicio.guardarContacto(contactoNuevo);
         return "redirect:/";
     }
@@ -44,14 +44,14 @@ public class ContactoControlador {
     @GetMapping("/editar/{id}")
     public String mostrarEditar(@PathVariable(value = "id") Long contactoId, ModelMap model) {
         Contacto contacto = contactoServicio.buscarContacto(contactoId);
-        logger.info("Contacto a editar (mostrar): " + contacto);
+        logger.info("Contacto a editar (mostrar): " + contacto);  // Opcional
         model.put("contacto", contacto);
         return "editar";
     }
 
     @PostMapping("/editar")
     public String editar(@ModelAttribute("contacto") Contacto contactoEditado) {
-        logger.info("Contacto a guardar (editar): " + contactoEditado);
+        logger.info("Contacto a guardar (editar): " + contactoEditado);  // Opcional
         contactoServicio.guardarContacto(contactoEditado);
         return "redirect:/";
     }
@@ -60,8 +60,7 @@ public class ContactoControlador {
     public String eliminar(@PathVariable(value = "id") Long contactoId) {
         Contacto contacto = new Contacto();
         contacto.setId(contactoId);
-        contactoServicio.buscarContacto(contactoId);
-        logger.info("Contacto a eliminar: " + contacto);
+        logger.info("Contacto a eliminar: " + contacto);  // Opcional
         contactoServicio.eliminarContacto(contacto);
         return "redirect:/";
     }
