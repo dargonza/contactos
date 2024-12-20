@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: bootcamp_m6
+    environment:
+      MYSQL_ROOT_PASSWORD: modulo6
+    volumes:
+      - bootcamp_m6_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  bootcamp_m6_data:

@@ -1,0 +1,10 @@
+INSERT INTO contactos (celular, email, nombre) VALUES ('1234567890', 'juan.perez@example.com', 'Juan Pérez');
+INSERT INTO contactos (celular, email, nombre) VALUES ('0987654321', 'ana.lopez@example.com', 'Ana López');
+INSERT INTO contactos (celular, email, nombre) VALUES ('1122334455', 'carlos.gomez@example.com', 'Carlos Gómez');
+INSERT INTO contactos (celular, email, nombre) VALUES ('9988776655', 'maria.diaz@example.com', 'María Díaz');
+INSERT INTO contactos (celular, email, nombre) VALUES ('6677889900', 'jose.fernandez@example.com', 'José Fernández');
+INSERT INTO contactos (celular, email, nombre) VALUES ('3344556677', 'laura.martinez@example.com', 'Laura Martínez');
+INSERT INTO contactos (celular, email, nombre) VALUES ('7766554433', 'pedro.garcia@example.com', 'Pedro García');
+INSERT INTO contactos (celular, email, nombre) VALUES ('2233445566', 'luisa.rodriguez@example.com', 'Luisa Rodríguez');
+INSERT INTO contactos (celular, email, nombre) VALUES ('8899001122', 'daniel.herrera@example.com', 'Daniel Herrera');
+INSERT INTO contactos (celular, email, nombre) VALUES ('5566778899', 'sofia.sanchez@example.com', 'Sofía Sánchez');
